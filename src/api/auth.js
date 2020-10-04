@@ -1,5 +1,6 @@
 //import the const for the url
-import {API_HOST} from '../utils/constants'
+import {API_HOST,TOKEN} from '../utils/constants'
+import JwtDecode from 'jwt-decode'
 //this is a exported function and recive a object
 export function SingUpApi(formData){
     //this is the url to the rest api
@@ -42,4 +43,54 @@ export function SingUpApi(formData){
         //return de error
         return err;
     })
+}
+export function LogInApi(formData){
+    const url = `${API_HOST}/login`
+    const userForm ={
+        ...formData,
+        email:formData.email
+    }
+    const params ={
+        method: "POST",
+        headers:{
+            "Content-Type":"application/json"
+        },
+        body: JSON.stringify(userForm)
+    }
+    return fetch(url,params).then(response=>{
+        return response.json()
+    }).then(result=>{
+        return result
+    }).catch(err=>{
+        return err;
+    })
+}
+export function SetTokenApi(token){
+    localStorage.setItem(TOKEN,token)
+}
+export function GetTokenApi(){
+    return localStorage.getItem(TOKEN)
+}
+export function LogoutApi(){
+    return localStorage.removeItem(TOKEN)
+}
+export function IsLogged(){
+    const token = GetTokenApi()
+    if(!token){
+        LogoutApi()
+        return
+    }
+    if(IsExpirate(token)){
+        LogoutApi()
+    }
+    return JwtDecode(token)
+}
+export function IsExpirate(token){
+    const {exp} = JwtDecode(token);
+    const expire = exp * 1000
+    const timeOut = expire - Date.now()
+    if(timeOut<0){
+        return true
+    }
+    return false
 }

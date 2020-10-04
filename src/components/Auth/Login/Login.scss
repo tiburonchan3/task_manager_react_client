@@ -1,9 +1,10 @@
+@import '../../../scss/index.scss';
 .login{
     padding: 20px;
     &__header{
-        color:#fff;
+        color:$white;
         text-align: center;
-        border-bottom: 1px solid #fff;
+        border-bottom: 1px solid $white;
         padding: 5px;
         h5{
             font-size: 24px;
@@ -22,10 +23,10 @@
                 background: transparent;
                 outline: none;
                 box-shadow: none;
-                color:#eee;
+                color:$light_grey;
                 border: none;
                 border-radius: 0;
-                border-bottom: 2px solid #eee;
+                border-bottom: 2px solid $light_grey;
             }
         }
         .btn.btn-primary{
@@ -34,7 +35,7 @@
             border-radius: 25px;
             height: 50px;
             width: 100%;
-            background: #2894ff;
+            background: $primary;
         }
     }
 }

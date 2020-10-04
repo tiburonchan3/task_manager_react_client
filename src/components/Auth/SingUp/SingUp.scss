@@ -1,23 +1,24 @@
+@import '../../../scss/index';
 .register_modal{
     background: rgba(0,0,0,.8);
     .modal-dialog{
         width: 30rem;
     }
     .modal-content{
-        background: #14303B;
+        background: $background_dark;
         padding: 20px;
         .modal-header{
             .modal-title{
-                color:#eee;
+                color:$light_grey;
             }
             .close{
-                color:#eee;
+                color:$light_grey;
             }
         }
         .borders{
             span{
                 display: block;
-                background: #2894ff;
+                background: $primary;
                 position: absolute;
                 &:nth-child(1){
                     left: 0;
@@ -64,10 +65,10 @@
                 background: transparent;
                 outline: none;
                 box-shadow: none;
-                color:#eee;
+                color:$light_grey;
                 border: none;
                 border-radius: 0;
-                border-bottom: 2px solid #eee;
+                border-bottom: 2px solid $light_grey;
             }
         }
         .btn.btn-primary{
@@ -104,12 +105,12 @@
                 }
             }
             .modal-header{
-                border-bottom: 2px solid #2894ff;
+                border-bottom: 2px solid $primary;
             }
             .modal-body{
                 .form-group{
                     .form-control{
-                        border-bottom: 2px solid #2894ff;
+                        border-bottom: 2px solid $primary;
                     }
                 }
             }

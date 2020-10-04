@@ -1,0 +1,33 @@
+@import '../../scss/index.scss';
+.home{
+    .header{
+        display: block;
+        .btn.btn-primary{
+            margin-left: 5%;
+            margin-top:1%;
+            font-size: 20px;
+            padding: 10px;
+            width: 250px;
+            border-radius: 30px;
+            background: $primary;
+        }
+        .title{
+            margin-left: 5%;
+            margin-top: 2%;
+            width: 90%;
+            border-bottom: 1px solid $background_dark;
+            h4{
+                padding-left: 50px;
+            }
+        }
+    }
+    .row{
+        .col-4{
+            .card{
+                .card-header{
+                    padding: 0 !important;
+                }
+            }
+        }
+    }
+}

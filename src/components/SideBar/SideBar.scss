@@ -1,0 +1,24 @@
+@import '../../scss/index.scss';
+#sidebar-wrapper{
+.sidebar{
+    img{
+        width: 150px;
+        margin-left: 30%;
+        margin-bottom: 10%;
+    }
+    .nav-item{
+        margin-left: 20%;
+        margin-top: 30px;
+        a{
+            color:$white;
+            font-size: 35px;
+            span{
+                margin-left: 20px;
+            }
+        }
+        .is-active{
+            color:$primary;
+        }
+    }
+}
+}

@@ -1,0 +1,59 @@
+@import '../scss/index';
+.navbar{
+    background:$background_dark;
+    height: 75px;
+    .navbar-brand{
+        color:$light_grey !important;
+    }
+    .navbar-toggler.collapsed{
+        border-color: rgba(255, 255, 255,0.5);
+        .navbar-toggler-icon{
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+
+        }
+    }
+    .navbar-collapse{
+        .navbar-nav{
+            .nav-link ,.nav-link.active{
+                color:$light_grey;
+                &:active,&:hover,&:focus{
+                    color:$light_grey;
+                }
+            }
+        }
+    }
+    .navbar-collapse.collapse.show,.navbar-collapse.collapsing{
+        background:$background_dark;
+        padding: 10px;
+    }
+
+}
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    min-height: 100vh !important;
+    z-index: 100;
+    padding: 48px 0 0;
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+    background: $background_dark !important;
+}
+#sidebar-wrapper{
+    min-height: 100vh !important;
+    width: 100vw;
+    margin-left: -1rem;
+    -webkit-transition: margin .25s ease-out;
+    -moz-transition: margin .25s ease-out;
+    -o-transition: margin .25s ease-out;
+    transition: margin .25s ease-out;
+}
+#sidebar-wrapper .sidebar-heading {
+    padding: 0.875rem 1.25rem;
+    font-size: 1.2rem;
+}
+
+#page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+}

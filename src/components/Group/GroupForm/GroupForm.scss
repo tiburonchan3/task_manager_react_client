@@ -1,0 +1,143 @@
+@import '../../../scss/index.scss';
+.group_modal{
+
+    .modal-dialog.modal-lg.modal-dialog-centered{
+        .modal-content{
+            padding: 20px;
+            background: $background_dark !important;
+            .borders{
+                span{
+                    display: block;
+                    background: $primary;
+                    position: absolute;
+                    &:nth-child(1){
+                        left: 0;
+                        bottom:0;
+                        width: 2px;
+                        height: 100%;
+                        transform: scaleY(0);
+                        transform-origin: top;
+                        transition: transform 0.5s;
+                    }
+                    &:nth-child(2){
+                        left: 0;
+                        bottom:0;
+                        width: 100%;
+                        height: 3px;
+                        transform: scaleX(0);
+                        transform-origin: right;
+                        transition: transform 0.5s;
+                    }
+                    &:nth-child(3){
+                        right: 0;
+                        bottom:0;
+                        width: 3px;
+                        height: 100%;
+                        transform: scaleY(0);
+                        transform-origin: right;
+                        transition: transform 0.5s;
+                    }
+                    &:nth-child(4){
+                        left: 0;
+                        top:0;
+                        width: 100%;
+                        height: 2px;
+                        transform: scaleX(0);
+                        transform-origin: right;
+                        transition: transform 0.5s;
+                    }
+                }
+            }
+            .modal-header{
+                .modal-title{
+                    color:$white;
+                }
+                .close{
+                    span{
+                        color:$white;
+                    }
+                }
+            }
+            .modal-body{
+                .group_form{
+                    .banner_form{
+                        height: 250px;
+                        width: 100%;
+                        background-size: cover;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        .mask{
+                            visibility: hidden;
+                            background: rgba($color: #000000, $alpha: .7);
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            span{
+                                width: 50px;
+                                font-size: 50px;
+                                cursor: pointer;
+                                color: white;
+                            }
+                        }
+                        &:hover{
+                            .mask{
+                                visibility: visible;
+                            }
+                        }
+                    }
+                }
+                .form-group{
+                    .form-control{
+                        margin-top: 40px;
+                        padding: 20px;
+                        background: transparent;
+                        outline: none;
+                        box-shadow: none;
+                        color:$light_grey;
+                        border: none;
+                        border-radius: 0;
+                        border-bottom: 2px solid $light_grey;
+                    }
+                }
+            }
+            &:hover{
+                .borders{
+                    span{
+                        &:nth-child(1){
+                            transform: scaleY(1);
+                            transform-origin: bottom;
+                            transition: transform 0.5s;
+                        }
+                        &:nth-child(2){
+                            transform: scaleX(1);
+                            transform-origin: left;
+                            transition: transform 0.5s;
+                        }
+                        &:nth-child(3){
+                            transform: scaleY(1);
+                            transform-origin: top;
+                            transition: transform 0.5s;
+                        }
+                        &:nth-child(4){
+                            transform: scaleX(1);
+                            transform-origin: left;
+                            transition: transform 0.5s;
+                        }
+                    }
+                }
+                .modal-header{
+                    border-bottom: 2px solid $primary;
+                }
+                .modal-body{
+                    .form-group{
+                        .form-control{
+                            border-bottom: 2px solid $primary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
